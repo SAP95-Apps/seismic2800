@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Seismic 2800</title>
+<link rel="icon" href="icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="theme-color" content="#0b2545">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Seismic 2800">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <svg class="logo" viewBox="0 0 1024 1024" aria-hidden="true">  <rect width="1024" height="1024" rx="200" fill="#0f3a66"/>  <rect x="300" y="150" width="424" height="560" rx="30" fill="#ffffff"/>  <g fill="#0f3a66"><rect x="370" y="230" width="110" height="110" rx="12"/><rect x="544" y="230" width="110" height="110" rx="12"/>  <rect x="370" y="410" width="110" height="110" rx="12"/><rect x="544" y="410" width="110" height="110" rx="12"/></g>  <path d="M90 820 H300 L370 700 L450 940 L540 690 L620 900 L690 820 H934" fill="none" stroke="#f59e0b" stroke-width="80" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <div>
+      <div class="brand-title" dir="ltr">Seismic 2800</div>
+      <div class="brand-sub">محاسبه ضریب زلزله بر اساس آیین‌نامه ۲۸۰۰</div>
+    </div>
+  </div>
+  <div class="seg" id="edSeg" role="tablist">
+    <button data-ed="5" class="on">ویرایش پنجم</button>
+    <button data-ed="4">ویرایش چهارم</button>
+  </div>
+  <div class="actions">
+    <button class="btn ghost" id="btnNew" title="پروژه جدید">جدید</button>
+    <button class="btn ghost" id="btnOpen" title="باز کردن پروژه">باز کردن</button>
+    <button class="btn ghost" id="btnSave" title="ذخیره پروژه">ذخیره</button>
+    <span class="sep"></span>
+    <button class="btn" id="btnEtabs" title="فایل طیف برای معرفی به ETABS">خروجی ETABS</button>
+    <button class="btn" id="btnCsv" title="خلاصه نتایج، مراحل محاسبات، جدول و نمودار طیف در فایل Excel">خروجی Excel</button>
+    <button class="btn primary" id="btnReport" title="گزارش کامل محاسبات">گزارش PDF</button>
+  </div>
+</header>
+
+<div class="banner" id="edBanner"></div>
+
+<main class="layout">
+  <aside class="inputs" id="inputs"></aside>
+  <section class="results">
+    <div class="kpis" id="kpis"></div>
+    <nav class="tabs" id="tabs">
+      <button data-tab="summary" class="on">خلاصه نتایج</button>
+      <button data-tab="steps">مراحل محاسبات</button>
+      <button data-tab="chart">نمودار طیف</button>
+      <button data-tab="table">جدول طیف</button>
+      <button data-tab="notes">هشدارها و نکات <span class="badge" id="noteBadge"></span></button>
+      <button data-tab="refs" class="tab-refs">📖 مراجع آیین‌نامه</button>
+    </nav>
+    <div class="panel" id="panel"></div>
+  </section>
+</main>
+
+<nav class="mnav" id="mnav">
+  <button data-m="in" class="on"><span class="ic">✎</span>ورودی‌ها</button>
+  <button data-m="out"><span class="ic">▤</span>نتایج <span class="mres" id="mres"></span></button>
+</nav>
+<input type="file" id="fileIn" accept=".json,.s2800" hidden>
+<div class="toast" id="toast"></div>
+
+<script src="js/data.js"></script>
+<script src="js/calc.js"></script>
+<script src="js/hazard.js"></script>
+<script src="js/hazardui.js"></script>
+<script src="js/v4cities.js"></script>
+<script src="js/chart.js"></script>
+<script src="js/report.js"></script>
+<script src="js/xlsx.js"></script>
+<script src="js/refs.js"></script>
+<script src="js/android.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "Seismic 2800 — محاسبه ضریب زلزله",
+  "short_name": "Seismic 2800",
+  "description": "محاسبه ضریب زلزله، طیف طرح و کنترل‌های آیین‌نامه ۲۸۰۰ (ویرایش‌های پنجم و چهارم)",
+  "lang": "fa", "dir": "rtl",
+  "start_url": "./index.html", "scope": "./",
+  "display": "standalone", "orientation": "any",
+  "background_color": "#0b2545", "theme_color": "#0b2545",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
